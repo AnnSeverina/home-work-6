@@ -1,0 +1,210 @@
+:root {
+  --light-pink: #ffe6f2;
+  --text-color: #46343d;
+  --accent-color: #844c65;
+  --layout-pink: #e7b9c9;
+  --border-color: #d8acbe;
+  --white-color: #fff9fc;
+  --border-pink: 2px solid var(--border-color);
+}
+
+header,
+footer {
+  background-color: var(--layout-pink);
+  color: var(--text-color);
+  text-align: left;
+  border: var(--border-pink);
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  outline: none;
+}
+
+.logo,
+.footer-title {
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+nav {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.header-list {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.aboutme,
+.education,
+.hobby,
+.cats,
+.questionnaire {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.5;
+  border: var(--border-pink);
+}
+
+.aboutme,
+.cats,
+.questionnaire,
+.hobby {
+  background-color: var(--light-pink);
+}
+
+.hobby h2 ~ p {
+  font-weight: 700;
+}
+
+.aboutme p::first-letter {
+  color: var(--accent-color);
+  font-size: 36px;
+}
+
+.education {
+  background: linear-gradient(to right, var(--light-pink) 20%, #f7cadc 80%);
+}
+
+.education h2 + p {
+  font-weight: 700;
+}
+
+.hobby {
+  background-image:
+    linear-gradient(#f8dff2bf, #f3d0f191), url('../images/books-cat.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.page-title,
+.questionnaire h1 {
+  color: var(--accent-color);
+  font-size: 36px;
+  text-align: center;
+}
+
+.section-title {
+  color: var(--accent-color);
+  font-size: 28px;
+  text-align: center;
+}
+
+h3 {
+  color: var(--accent-color);
+}
+
+.list-books,
+.list-games {
+  list-style: square;
+}
+
+.cats-list {
+  list-style: none;
+}
+
+/* Цей селектор має найбільшу специфічність (0, 2, 1)*/
+.list-books li:first-child {
+  font-weight: 700;
+}
+
+/* Цей селектор також має найбільшу специфічність (0, 2, 1)*/
+.list-books li:last-child {
+  font-style: italic;
+}
+
+img {
+  border: 5px ridge var(--border-color);
+}
+
+.questionnaire h1::after {
+  content: '✦';
+  color: var(--layout-pink);
+}
+
+fieldset {
+  background-color: var(--white-color);
+  border: var(--border-pink);
+}
+
+legend {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+form > label {
+  font-weight: 700;
+}
+
+:where(
+  input[type='text'],
+  input[type='date'],
+  input[type='email'],
+  input[type='password'],
+  input[type='file'],
+  select,
+  textarea
+) {
+  border: var(--border-pink);
+}
+
+:where(
+  input[type='text'],
+  input[type='date'],
+  input[type='email'],
+  input[type='password'],
+  input[type='file'],
+  select,
+  textarea
+):focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--layout-pink);
+  color: var(--text-color);
+  border: var(--border-pink);
+  font-size: 16px;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  outline: none;
+}
+
+textarea {
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--accent-color);
+}
+
+fieldset label:has(input:checked) {
+  color: var(--accent-color);
+  font-weight: 700;
+}

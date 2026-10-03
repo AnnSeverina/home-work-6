@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анкетування</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="../index.html">Logo</a>
+      <nav>
+        <ul class="header-list">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+          <li><a href="#questionnaire">Анкетування</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="questionnaire" id="questionnaire">
+        <h1>Анкета користувача</h1>
+
+        <form>
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" placeholder="Введіть ім'я" />
+          <label for="surname">Прізвище</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Введіть прізвище"
+          />
+          <label for="birthday">Дата народження</label>
+          <input type="date" id="birthday" name="birthday" />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Введіть email"
+          />
+          <label for="password">Створіть пароль</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="6"
+            placeholder="Мінімум 6 символів"
+          />
+          <fieldset>
+            <legend>Вкажіть стать</legend>
+            <label
+              ><input type="radio" name="sex" value="female" />Жіноча</label
+            >
+            <label
+              ><input type="radio" name="sex" value="male" />Чоловіча</label
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Ваші інтереси</legend>
+            <label>
+              <input type="checkbox" name="interests" value="books" />Книги
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="games" />Ігри
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="sport" />Спорт
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="music" />Музика
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="interests"
+                value="cooking"
+              />Кулінарія
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="travel" />Подорожі
+            </label>
+          </fieldset>
+
+          <label for="photo">Завантажте ваше фото</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept=".jpg, .jpeg, .png"
+          />
+
+          <label for="city">Вкажіть ваше місто</label>
+          <select id="city" name="city">
+            <option value="kyiv">Київ</option>
+            <option value="kharkiv">Харків</option>
+            <option value="odesa">Одеса</option>
+            <option value="dnipro">Дніпро</option>
+            <option value="lviv">Львів</option>
+            <option value="other">Інше місто</option>
+          </select>
+
+          <label for="about">Розкажіть про себе:</label>
+          <textarea
+            id="about"
+            name="about"
+            rows="6"
+            cols="50"
+            placeholder="Напишіть декілька речень про себе"
+          ></textarea>
+
+          <label>
+            <input
+              type="checkbox"
+              name="data-consent"
+              value="accepted"
+              required
+            />
+            Погоджуюся на обробку персональних даних
+          </label>
+
+          <button type="submit">Надіслати</button>
+          <button type="reset">Очистити форму</button>
+        </form>
+
+        <button type="button" class="close">Закрити форму</button>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <h2 class="footer-title">Контакти</h2>
+      <address>
+        <a href="mailto:anna@gmail.com">anna@gmail.com</a>
+        <a href="tel:+380661234567">+380661234567</a>
+      </address>
+    </footer>
+  </body>
+</html>
